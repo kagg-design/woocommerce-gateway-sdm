@@ -4,7 +4,7 @@
  * Plugin URI:
  * Description: WooCommerce gateway to make payments via SDM bank.
  * Author: KAGG Design
- * Version: 1.5
+ * Version: 1.5.1
  * Author URI: https://kagg.eu/en/
  * Requires at least: 4.4
  * Tested up to: 4.8
@@ -575,9 +575,9 @@ function init_sdm_gateway_class() {
 		 * @return bool
 		 */
 		public function check_response() {
-			write_log( '***Response from Bank***' );
+			kagg_write_log( '***Response from Bank***' );
 			if ( isset( $_POST['RRN'] ) ) { // Input var okay.
-				dump( $_POST );
+				kagg_dump( $_POST );
 				isset( $_POST['Order'] ) ? $order_id = sanitize_text_field( $_POST['Order'] ) : $order_id = 0; // Input var okay.
 				if ( 0 === $order_id ) {
 					return false;
@@ -1039,8 +1039,8 @@ function check_for_sdm() {
 							<?php
 						}
 					}
-					write_log( '***Request***' );
-					dump( $request );
+					kagg_write_log( '***Request***' );
+					kagg_dump( $request );
 					?>
                 </form>
                 <script type="text/javascript">
