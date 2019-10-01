@@ -1,0 +1,199 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce SDM Gateway\n"
+"POT-Creation-Date: 2017-08-29 12:37+0300\n"
+"PO-Revision-Date: 2017-08-29 12:38+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: woocommerce-gateway-sdm.php:198
+msgid "SDM Bank"
+msgstr "СДМ-банк"
+
+#: woocommerce-gateway-sdm.php:199
+msgid "WooCommerce gateway to make payments via SDM bank"
+msgstr "Шлюз WooCommerce для платежей через СДМ-банк"
+
+#: woocommerce-gateway-sdm.php:241
+msgid "Enable"
+msgstr "Активировать"
+
+#: woocommerce-gateway-sdm.php:243
+msgid "Enable SDM Bank Gateway"
+msgstr "Активировать шлюз СДМ-банка"
+
+#: woocommerce-gateway-sdm.php:247
+msgid "Title"
+msgstr "Заголовок"
+
+#: woocommerce-gateway-sdm.php:249
+msgid "Payment method title that the customer will see on checkout."
+msgstr ""
+"Заголовок метода платежа, который пользователь увидит при оформлении заказа."
+
+#: woocommerce-gateway-sdm.php:250
+msgid "SDM Bank Gateway"
+msgstr "Шлюз СДМ-банка"
+
+#: woocommerce-gateway-sdm.php:254
+msgid "Description"
+msgstr "Описание"
+
+#: woocommerce-gateway-sdm.php:256
+msgid "Payment method description that the customer will see on checkout."
+msgstr ""
+"Описание метода платежа, которое пользователь увидит при оформлении заказа."
+
+#: woocommerce-gateway-sdm.php:257
+msgid "Pay via SDM Bank Gateway"
+msgstr "Оплата через шлюз СДМ-банка"
+
+#: woocommerce-gateway-sdm.php:261
+msgid "Merchant name"
+msgstr "Имя торговца"
+
+#: woocommerce-gateway-sdm.php:263
+msgid "Merchant company name."
+msgstr "Имя компании торговца"
+
+#: woocommerce-gateway-sdm.php:268
+msgid "Merchant URL"
+msgstr "URL сайта торговца"
+
+#: woocommerce-gateway-sdm.php:270
+msgid "Merchant URL string."
+msgstr "Строка URL сайта торговца."
+
+#: woocommerce-gateway-sdm.php:275
+msgid "Merchant back ref"
+msgstr "URL возврата"
+
+#: woocommerce-gateway-sdm.php:277
+msgid "Merchant back reference."
+msgstr "URL возврата после проведения платежа."
+
+#: woocommerce-gateway-sdm.php:282
+msgid "Test mode"
+msgstr "Тестовый режим"
+
+#: woocommerce-gateway-sdm.php:284
+msgid "Fields below have different values in test mode."
+msgstr "Поля ниже содержат другие значения в тестовом режиме."
+
+#: woocommerce-gateway-sdm.php:285
+msgid "Enable test mode"
+msgstr "Активировать тестовый режим"
+
+#: woocommerce-gateway-sdm.php:293
+msgid "Test Merchant ID"
+msgstr "Тестовый идентификатор торговца"
+
+#: woocommerce-gateway-sdm.php:295
+msgid "Test Merchant ID in SDM Bank."
+msgstr "Тестовый идентификатор торговца в СДМ-банке."
+
+#: woocommerce-gateway-sdm.php:300
+msgid "Test Terminal"
+msgstr "Тестовый терминал"
+
+#: woocommerce-gateway-sdm.php:302
+msgid "Test Merchant terminal ID."
+msgstr "Тестовый идентификатор терминала торговца."
+
+#: woocommerce-gateway-sdm.php:307
+msgid "Test Key"
+msgstr "Тестовый ключ"
+
+#: woocommerce-gateway-sdm.php:309
+msgid "Test Merchant key."
+msgstr "Тестовый ключ торговца."
+
+#: woocommerce-gateway-sdm.php:314
+msgid "Test Email"
+msgstr "Тестовый Email"
+
+#: woocommerce-gateway-sdm.php:316
+msgid "Test Merchant Email."
+msgstr "Тестовый Email торговца."
+
+#: woocommerce-gateway-sdm.php:325
+msgid "Merchant ID"
+msgstr "Идентификатор торговца"
+
+#: woocommerce-gateway-sdm.php:327
+msgid "Merchant ID in SDM Bank."
+msgstr "Идентификатор торговца в СДМ-банке."
+
+#: woocommerce-gateway-sdm.php:332
+msgid "Terminal"
+msgstr "Терминал"
+
+#: woocommerce-gateway-sdm.php:334
+msgid "Merchant terminal ID."
+msgstr "Идентификатор терминала торговца."
+
+#: woocommerce-gateway-sdm.php:339
+msgid "Key"
+msgstr "Ключ"
+
+#: woocommerce-gateway-sdm.php:341
+msgid "Merchant key."
+msgstr "Ключ торговца."
+
+#: woocommerce-gateway-sdm.php:346
+msgid "Email"
+msgstr "Email"
+
+#: woocommerce-gateway-sdm.php:348
+msgid "Merchant Email."
+msgstr "Email торговца."
+
+#: woocommerce-gateway-sdm.php:376
+msgid "Fee"
+msgstr "Налог"
+
+#: woocommerce-gateway-sdm.php:408
+msgid "SDM Bank supports payment only in Rubles"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:409 woocommerce-gateway-sdm.php:449
+msgid "Payment error: "
+msgstr "Ошибка платежа: "
+
+#: woocommerce-gateway-sdm.php:429
+msgid "Coupon"
+msgstr "Купон"
+
+#: woocommerce-gateway-sdm.php:448
+msgid "Description must be in 1-50 characters"
+msgstr "Описание должно иметь длину 1-50 символов"
+
+#: woocommerce-gateway-sdm.php:586
+msgid "SDM bank payment approved"
+msgstr "Платеж через СДМ-банк подтвержден"
+
+#: woocommerce-gateway-sdm.php:597
+msgid "SDM bank payment error: "
+msgstr "Ошибка платежа в СДМ-банке: "
+
+#: woocommerce-gateway-sdm.php:963
+msgid "Length of the field \""
+msgstr "Длина поля \""
+
+#: woocommerce-gateway-sdm.php:965
+msgid "must be in "
+msgstr "должна быть "
+
+#: woocommerce-gateway-sdm.php:966
+msgid "characters."
+msgstr "символов."

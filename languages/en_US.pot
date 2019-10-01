@@ -1,0 +1,160 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce SDM Gateway\n"
+"POT-Creation-Date: 2017-02-03 13:08+0200\n"
+"PO-Revision-Date: 2017-02-03 13:08+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: woocommerce-gateway-sdm.php:40
+msgid "SDM Bank"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:41
+msgid "WooCommerce gateway to make payments via SDM bank"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:77
+msgid "Enable"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:79
+msgid "Enable SDM Bank Gateway"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:83
+msgid "Title"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:85
+msgid "Payment method title that the customer will see on checkout."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:86
+msgid "SDM Bank Gateway"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:90
+msgid "Description"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:92
+msgid "Payment method description that the customer will see on checkout."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:93
+msgid "Pay via SDM Bank Gateway"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:97
+msgid "Merchant name"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:99
+msgid "Merchant company name."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:104
+msgid "Merchant URL"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:106
+msgid "Merchant URL string."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:111
+msgid "Merchant back ref"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:113
+msgid "Merchant back reference."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:118
+msgid "Test mode"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:120
+msgid "Fields below have different values in test mode."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:121
+msgid "Enable test mode"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:129
+msgid "Test Merchant ID"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:131
+msgid "Test Merchant ID in SDM Bank."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:136
+msgid "Test Terminal"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:138
+msgid "Test Merchant terminal ID."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:143
+msgid "Test Key"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:145
+msgid "Test Merchant key."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:150
+msgid "Test Email"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:152
+msgid "Test Merchant Email."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:160
+msgid "Merchant ID"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:162
+msgid "Merchant ID in SDM Bank."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:167
+msgid "Terminal"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:169
+msgid "Merchant terminal ID."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:174
+msgid "Key"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:176
+msgid "Merchant key."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:181
+msgid "Email"
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:183
+msgid "Merchant Email."
+msgstr ""
+
+#: woocommerce-gateway-sdm.php:204
+msgid "Fee"
+msgstr ""
