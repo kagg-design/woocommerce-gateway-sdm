@@ -1,20 +1,20 @@
 <?php
 /**
  * Plugin Name: WooCommerce SDM Bank Gateway
- * Plugin URI:
+ * Plugin URI: https://kagg.eu/en/
  * Description: WooCommerce gateway to make payments via SDM bank.
  * Author: KAGG Design
- * Version: 1.8
+ * Version: 1.9
  * Author URI: https://kagg.eu/en/
  * Requires at least: 4.4
- * Tested up to: 4.8
+ * Tested up to: 5.4
  * WC requires at least: 3.0.0
- * WC tested up to: 3.2.2
+ * WC tested up to: 4.2.0
  *
  * Text Domain: woocommerce-gateway-sdm
  * Domain Path: /languages/
  *
- * @package WooCommerce SDM Bank Gateway
+ * @package wc-gateway-sdm
  * @author  KAGG Design
  */
 
@@ -52,8 +52,6 @@ add_action( 'plugins_loaded', 'init_sdm_gateway_class' );
  * If POST contains RRN - it is response from SDM bank, process it.
  * If GET contains sdm_gateway - it is self hook from this plugin,
  * we have to create form and make POST request to the bank.
- * This function cannot be a method of the class WC_Gateway_SDM, as this class extends WC_Payment_Gateway,
- * but WC_Payment_Gateway is not initialized if we are not on a WooCommerce page.
  */
 function check_for_sdm() {
 	if ( isset( $_POST['RRN'] ) ) {
@@ -79,7 +77,6 @@ function check_for_sdm() {
 				?>
 				<form id="sdm_form" action="<?php echo esc_url( $gateway_link ); ?>" method="post">
 					<?php
-					$request = [];
 					foreach ( $_GET as $a => $b ) {
 						if ( ( 'sdm_gateway' !== $a ) && ( 'sdm_mode' !== $a ) && ( '_wpnonce' !== $a ) ) {
 							$request[ $a ] = $b;
@@ -90,8 +87,6 @@ function check_for_sdm() {
 							<?php
 						}
 					}
-					kagg_write_log( '***Request***' );
-					kagg_dump( $request );
 					?>
 				</form>
 				<script type="text/javascript">

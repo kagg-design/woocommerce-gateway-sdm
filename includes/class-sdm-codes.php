@@ -205,7 +205,9 @@ class SDM_Codes {
 	}
 
 	/**
-	 * @param string $result
+	 * Get result message.
+	 *
+	 * @param string $result Result.
 	 *
 	 * @return mixed|string|void
 	 */
@@ -225,7 +227,9 @@ class SDM_Codes {
 	}
 
 	/**
-	 * @param string $rc
+	 * Get detailed message.
+	 *
+	 * @param string $rc Detailed result code.
 	 *
 	 * @return mixed|string|void
 	 */
@@ -340,7 +344,9 @@ class SDM_Codes {
 	}
 
 	/**
-	 * @param string $auth_code
+	 * Get additional message.
+	 *
+	 * @param string $auth_code Auth code.
 	 *
 	 * @return mixed|string|void
 	 */

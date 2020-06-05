@@ -11,27 +11,37 @@
 class WC_Gateway_SDM extends WC_Payment_Gateway {
 
 	/**
-	 * @var string Plugin version.
+	 * Plugin version.
+	 *
+	 * @var string
 	 */
 	public $version;
 
 	/**
-	 * @var string Absolute plugin path.
+	 * Absolute plugin path.
+	 *
+	 * @var string
 	 */
 	public $plugin_path;
 
 	/**
-	 * @var string Absolute plugin URL.
+	 * Absolute plugin URL.
+	 *
+	 * @var string
 	 */
 	public $plugin_url;
 
 	/**
-	 * @var string Absolute path to plugin includes dir.
+	 * Absolute path to plugin includes dir.
+	 *
+	 * @var string
 	 */
 	public $includes_path;
 
 	/**
-	 * @var string Plugin id.
+	 * Plugin id.
+	 *
+	 * @var string
 	 */
 	public $id;
 
@@ -176,14 +186,18 @@ class WC_Gateway_SDM extends WC_Payment_Gateway {
 	protected $test_email;
 
 	/**
-	 * @var bool Whether or not logging is enabled.
+	 * Whether or not logging is enabled.
+	 *
+	 * @var bool
 	 */
 	public static $log_enabled = false;
 
 	/**
-	 * @var bool WC_Logger Logger instance.
+	 * WC_Logger Logger instance.
+	 *
+	 * @var WC_Logger|null
 	 */
-	public static $log = false;
+	public static $log = null;
 
 	/**
 	 * WC_Gateway_SDM constructor.
@@ -383,7 +397,12 @@ class WC_Gateway_SDM extends WC_Payment_Gateway {
 		$subtotal  = 0;
 
 		// Get all products.
-		/** @var WC_Order_Item $item */
+
+		/**
+		 * Order item.
+		 *
+		 * @var WC_Order_Item $item
+		 */
 		foreach ( $order->get_items( [ 'line_item', 'fee', 'coupon' ] ) as $item ) {
 			$cur_item = [];
 			if ( 'fee' === $item['type'] ) {
@@ -398,7 +417,11 @@ class WC_Gateway_SDM extends WC_Payment_Gateway {
 
 				$subtotal -= $item['discount'];
 			} else {
-				/** @var WC_Product $product */
+				/**
+				 * Product.
+				 *
+				 * @var WC_Product $product
+				 */
 				$product           = $item->get_product();
 				$sku               = is_object( $product ) ? $product->get_sku() : '';
 				$cur_item['name']  = $item['name'];
@@ -414,14 +437,14 @@ class WC_Gateway_SDM extends WC_Payment_Gateway {
 
 		$shipping_total = wc()->cart->get_shipping_total();
 
-		/**
-		 * Payment values.
-		 */
+		// Payment values.
 
-		// SDM bank requires AMOUNT field length = 12.
-		// But leading spaces cause an error.
-		// And field with leading zeroes outputs as is: 000000000xxx.
-		// Testing shows that dynamic length is OK.
+		/**
+		 * SDM bank requires AMOUNT field length = 12.
+		 * But leading spaces cause an error.
+		 * And field with leading zeroes outputs as is: 000000000xxx.
+		 * Testing shows that dynamic length is OK.
+		 */
 		$amount = $subtotal + $shipping_total;
 
 		$currency = \SDM_Codes::get_currency_code( get_woocommerce_currency() );
@@ -437,9 +460,11 @@ class WC_Gateway_SDM extends WC_Payment_Gateway {
 			];
 		}
 
-		// SDM bank requires ORDER field length = 6 - 32.
-		// ORDER must be unique during a 24 hours.
-		// We take last 6 digits from $order_id and add 6 random digits.
+		/**
+		 * SDM bank requires ORDER field length = 6 - 32.
+		 * ORDER must be unique during a 24 hours.
+		 * We take last 6 digits from $order_id and add 6 random digits.
+		 */
 		$order_id = sprintf( '%06d%06d', (int) $order_id % 1000000, wp_rand( 0, 999999 ) );
 
 		$desc       = '';
@@ -514,9 +539,7 @@ class WC_Gateway_SDM extends WC_Payment_Gateway {
 		// Validated on input.
 		$back_reference = $this->back_reference;
 
-		/**
-		 * End of payment values.
-		 */
+		// End of payment values.
 
 		$body   = [
 			'AMOUNT'     => $amount,
@@ -569,16 +592,20 @@ class WC_Gateway_SDM extends WC_Payment_Gateway {
 		} else {
 			$scheme = '';
 		}
+
 		if ( ( $scheme ) && ( 'off' !== $scheme ) ) {
 			$scheme = 'https';
 		} else {
 			$scheme = 'http';
 		}
+
 		$link = site_url( '', $scheme );
 		$link = $link . '?sdm_gateway=post';
+
 		if ( 'yes' === $this->test_mode ) {
 			$link = $link . '&sdm_mode=test';
 		}
+
 		$query = "&AMOUNT={$amount}&CURRENCY={$currency}&ORDER={$order_id}";
 
 		$query .= "&DESC={$desc}&TERMINAL={$terminal}&TRTYPE={$trtype}&MERCH_NAME={$merchant_name}";
